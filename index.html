@@ -1,1 +1,192 @@
-<p>hi</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>bunnyland</title>
+  </head>
+  <body>
+    <div style="background-image:url(./images/bbysk8bckgrnd1.png);background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;">
+<p style="width:100%;background-color:lightgray">page number <span id="num1">1</span>
+</p>
+<div style="width:300px;
+            height:300px;
+            width:100%;
+            text-align:center;padding-top:60px;">
+  <div style="z-index:99;
+              position:absolute;
+              width:100%">
+    <p id="deFacto" 
+    style="font-size:33px;
+           font-family:pilowlava;
+           text-align:right;
+           padding-left:400px;">laughing past the laugh
+    </p>
+  
+</div>
+
+<img id="page1" style="width:300px;height:300px" src="images/n1.jpg"></img>
+<img id="page2" style="width:300px;height:300px;display:none" src=""></img> 
+
+</div>
+
+<div style="text-align:center;
+            line-height: 100px;">
+
+
+
+<br />
+
+
+<audio controls autoplay>
+  <source src="https://www.babysleepsite.com/downloads/noise-only.mp3" type="audio/mpeg">
+</audio>
+<div style="display:flex;width:100%;padding-top:100px;flex-direction:row;justify-content:space-around">
+  
+  <img id="carrier" style="height:200px;width:200px;margin-top:-500px;margin-right:-500px;">
+  
+  </img>
+</div>  
+
+
+<h1>community donate:</h1>
+
+
+</div>
+
+  <script>
+            
+  
+  var index1=0
+  
+  function electrocutioner() {
+  
+  var index3haha = ["https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d92a1b3ce1d74f3681f/1615744403311/bob1.png",
+                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9a3b420d5135c70293/1615744410665/bob2.png",
+                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9fdbd00f6c0e505c08/1615744415623/bob3.png",
+                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4da409fd096445ba51c2/1615744421486/bob4.png",
+                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9fdbd00f6c0e505c08/1615744415623/bob3.png",
+                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9a3b420d5135c70293/1615744410665/bob2.png",]
+  
+  var pathway1=document.getElementById("carrier");
+  
+  pathway1.src=index3haha[index1]
+  
+  index1++;
+  if (index1>=index3haha.length)
+  {
+  index1=0
+  }
+  }
+  
+  setInterval(electrocutioner,130)
+
+</script>
+
+
+
+
+
+<script>
+
+
+var page1 = document.getElementById("page1")
+var page2 = document.getElementById("page2")
+var index=0
+
+
+function moveBody(){
+  document.getElementById("carrier").style.marginRight="500px";
+}
+
+function moveBody2(){
+  document.getElementById("carrier").style.marginRight="-500px";
+}
+
+function changeImag() {
+
+  var imagees= ["images/3.jpg","images/n1.jpg"]
+ 
+  page1.src=imagees[index];
+  index++;
+  if(index>=imagees.length){
+    index=0
+  }
+}
+
+function randomImage() {
+  var imagees= [
+                "images/n2.jpg",
+                "images/n3.jpg",
+                "images/1.jpg"]
+
+  var x = Math.floor(Math.random() * 3);
+  page2.src=imagees[x]
+
+}
+
+var pageNumber=1
+
+function turnPage() {
+  if(pageNumber==1){
+  page1.style.display="none";
+  page2.style.display="inline-block";
+  pageNumber++;
+  console.log(pageNumber)
+ document.getElementById("num1").innerHTML=pageNumber
+  }
+  else if(pageNumber==2){
+    page1.style.display="inline-block";
+    page2.style.display="none";
+    pageNumber--;
+    console.log(pageNumber)
+    document.getElementById("num1").innerHTML=pageNumber
+  }
+}
+
+function moveDeFacto(){
+  if(document.getElementById("deFacto").style.textAlign=="right"){
+document.getElementById("deFacto").style.textAlign="left"
+document.getElementById("deFacto").style.paddingLeft="0px"
+  }
+  else{
+    document.getElementById("deFacto").style.textAlign="right"
+document.getElementById("deFacto").style.paddingLeft="400px"
+  }
+}
+
+setInterval(moveDeFacto, 6000)
+setInterval(turnPage,4000)
+setInterval(changeImag, 3000)
+setInterval(randomImage, 3500)
+setInterval(moveBody,3333)
+setInterval(moveBody2,6666)
+</script>
+
+
+
+
+
+
+
+
+
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+   
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
