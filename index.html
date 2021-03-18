@@ -11,8 +11,7 @@
     <div style="background-image:url(./images/bbysk8bckgrnd1jpg.jpg);background-position: center;
     background-repeat: no-repeat;
     background-size: cover;">
-<p style="width:100%;background-color:lightgray">page number <span id="num1">1</span>
-</p>
+
 <div style="width:300px;
             height:300px;
             width:100%;
@@ -21,58 +20,134 @@
               position:absolute;
               width:100%">
     <p id="deFacto" 
-    style="font-size:66px;
+    style="font-size:50px;
            font-family:pilowlava;
-           font-color:grey;
+           color:#9b4193;
            text-align:right;
            padding-left:400px;
-           padding-top:-200px;">baby skateboards zine
+           margin-top:-40px;">baby skateboards zine
     </p>
   
 </div>
 
-<img id="page1" style="width:300px;height:300px" src="images/head.png"></img>
-<img id="page2" style="width:300px;height:300px;display:none" src=""></img> 
+<img id="page1" style="opacity:90%;padding-top:63px;width:300px;height:300px" src="images/head.png"></img>
+<img id="page2" style="opacity:90%;padding-top:63px;width:300px;height:300px;display:none" src="images/head.png"></img> 
 
 </div>
 
-<div style="text-align:center;
-            line-height: 100px;">
+
 
 
 
 <br />
 
-
-<audio controls autoplay>
+<div style="text-align:left">
+<audio id="player" autoplay>
   <source src="https://www.babysleepsite.com/downloads/noise-only.mp3" type="audio/mpeg">
 </audio>
+<div style="transform:rotate(270deg);opacity: 30%;padding-top:-30px;"> 
+  <button onclick="document.getElementById('player').play()">Play</button> 
+  <button onclick="document.getElementById('player').pause()">Pause</button> 
+  <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+  <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+</div>
+</div>
+
+<script>
+function loader1() {
+  document.getElementById('player').play()
+} 
+
+window.onload = loader1;
+</script>
+
+<div style="text-align:center;
+            line-height: 100px;">
+
 <div style="display:flex;width:100%;padding-top:100px;flex-direction:row;justify-content:space-around">
-  
-  <img id="carrier" style="height:200px;width:200px;margin-top:-500px;margin-right:-500px;">
-  
+  <div id="carrier2">
+  <img id="carrier" class="" style="opacity:66%;padding-top:100px;height:200px;width:200px;margin-top:-500px;margin-right:-500px;">
+  </div>
   </img>
 </div>  
 
+<style>
+  .fadeIn {
+    animation: fadeIn ease 4s;
+  }
 
-<h1>community donate:</h1>
+  @keyframes fadeIn {
+    0% {opacity:0}
+    100% {opacity:.66}
+  }
+
+  .fadeOut {
+    animation: fadeOut ease 4s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% {opacity:.66}
+    100% {opacity:0}
+  }
+</style>
+
+
+<script>
+  function fadeInAdd(){
+    let newThing=document.getElementById("carrier");
+    newThing.classList.add("fadeIn");
+    newThing.classList.remove("fadeOut")
+    console.log("button clicked")
+  }
+
+  function fadeInUn(){
+    let newThing1=document.getElementById("carrier");
+    newThing1.classList.remove("fadeIn");
+    newThing1.classList.add("fadeOut")
+    console.log("button clicked")
+  }
+
+  var myVar;
+
+  function theFade(){
+    fadeInUn()
+    myVar = setTimeout(fadeInAdd, 6000)
+    
+  }
+
+  setInterval(theFade, 12000)
+  
+</script>
+
+<h1 style="font-family:avara;margin-top:0px;color:#FFA500">community donate:</h1>
+
+
+<img style="width:60%" src="images/thursDecay2.jpg">
+<br>
+<img style="width:60%" src="images/thursDecay1.jpg">
+<br>
+<img style="width:60%" src="images/thursDecay3.jpg">
+
 
 
 </div>
 
   <script>
             
+
+    
+  
   
   var index1=0
   
   function electrocutioner() {
   
-  var index3haha = ["https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d92a1b3ce1d74f3681f/1615744403311/bob1.png",
-                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9a3b420d5135c70293/1615744410665/bob2.png",
-                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9fdbd00f6c0e505c08/1615744415623/bob3.png",
-                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4da409fd096445ba51c2/1615744421486/bob4.png",
-                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9fdbd00f6c0e505c08/1615744415623/bob3.png",
-                    "https://static1.squarespace.com/static/54a045c3e4b004237f86d5b5/t/604e4d9a3b420d5135c70293/1615744410665/bob2.png",]
+  var index3haha = ["images/bob1.png",
+                    "images/bob2.png",
+                    "images/bob3.png",
+                    "images/bob4.png",
+                    "images/bob3.png",
+                    "images/bob2.png"]
   
   var pathway1=document.getElementById("carrier");
   
@@ -85,7 +160,9 @@
   }
   }
   
-  setInterval(electrocutioner,130)
+  setInterval(electrocutioner,150)
+
+ 
 
 </script>
 
@@ -162,11 +239,11 @@ document.getElementById("deFacto").style.paddingLeft="400px"
 }
 
 setInterval(moveDeFacto, 6000)
-setInterval(turnPage,4000)
+
 setInterval(changeImag, 3000)
 setInterval(randomImage, 5000)
-setInterval(moveBody,3333)
-setInterval(moveBody2,6666)
+setInterval(moveBody,10000)
+
 </script>
 
 
@@ -183,12 +260,11 @@ setInterval(moveBody2,6666)
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
-
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
 </html>
+
