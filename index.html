@@ -11,7 +11,18 @@
     <div style="background-image:url(./images/bbysk8bckgrnd1jpg.jpg);background-position: center;
     background-repeat: no-repeat;
     background-size: cover;">
-
+<div style="position:fixed;
+            left:0;z-index:99;
+            font-family:pilowlava;
+            font-size:30px;
+            line-height:40px;
+            padding-top:100px;
+            padding-left:30px;
+            color:red">
+  <p>body</p>
+  <p>mind</p>
+  <p>spirit</p>
+</div>
 <div style="width:300px;
             height:300px;
             width:100%;
@@ -30,8 +41,9 @@
   
 </div>
 
-<img id="page1" style="opacity:90%;padding-top:63px;width:300px;height:300px" src="images/head.png"></img>
-<img id="page2" style="opacity:90%;padding-top:63px;width:300px;height:300px;display:none" src="images/head.png"></img> 
+
+<img id="page1" style="opacity:90%;padding-top:63px;width:330px;height:400px" src="images/head.png"></img>
+<img id="page2" style="opacity:90%;padding-top:63px;width:330px;height:400px;display:none" src="images/head.png"></img> 
 
 </div>
 
@@ -41,35 +53,58 @@
 
 <br />
 
-<div style="text-align:left">
+
+
+<div style="float:right">
 <audio id="player" autoplay>
   <source src="https://www.babysleepsite.com/downloads/noise-only.mp3" type="audio/mpeg">
 </audio>
-<div style="transform:rotate(270deg);opacity: 30%;padding-top:-30px;"> 
-  <button onclick="document.getElementById('player').play()">Play</button> 
-  <button onclick="document.getElementById('player').pause()">Pause</button> 
-  <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
-  <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+<h1 style="transform:rotate(270deg);opacity: 66%;">audio controls</hi><br/>
+<div style="transform:rotate(0deg);opacity: 50%"> 
+ 
+  <button style="font-family:pilowlava;font-size:50px" onclick="document.getElementById('player').play()">Play</button> 
+  <button style="font-size:30px;" onclick="document.getElementById('player').pause()">II</button> 
+  <button style="font-size:30px;width:33px;" onclick="document.getElementById('player').volume -= 0.1"> - </button> 
+  <button style="font-size:30px" onclick="document.getElementById('player').volume += 0.1">+</button> 
 </div>
 </div>
 
-<script>
-function loader1() {
-  document.getElementById('player').play()
-} 
 
-window.onload = loader1;
-</script>
+
+
 
 <div style="text-align:center;
             line-height: 100px;">
 
 <div style="display:flex;width:100%;padding-top:100px;flex-direction:row;justify-content:space-around">
   <div id="carrier2">
-  <img id="carrier" class="" style="opacity:66%;padding-top:100px;height:200px;width:200px;margin-top:-500px;margin-right:-500px;">
-  </div>
-  </img>
+  <img id="carrier" class="" style="opacity:66%;height:200px;width:200px;margin-top:-200px;margin-right:-500px;">
+</img>  
+</div>
+  
 </div>  
+
+
+
+
+
+<h1 style="font-family:avara;margin-top:0px;color:#FFA500">community donate:</h1>
+
+
+
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center">
+<img style="width:40%" src="images/thursDecay2.jpg">
+<img style="width:40%" src="images/thursDecay3.jpg">
+<img style="width:40%" src="images/thursDecay1.jpg">
+<img style="width:40%" src="images/thursDecay2.jpg">
+
+</div>
+
+
+</div>
+
+
+
 
 <style>
   .fadeIn {
@@ -117,20 +152,23 @@ window.onload = loader1;
 
   setInterval(theFade, 12000)
   
+
+
 </script>
 
-<h1 style="font-family:avara;margin-top:0px;color:#FFA500">community donate:</h1>
-
-
-<img style="width:60%" src="images/thursDecay2.jpg">
-<br>
-<img style="width:60%" src="images/thursDecay1.jpg">
-<br>
-<img style="width:60%" src="images/thursDecay3.jpg">
 
 
 
-</div>
+
+
+
+
+
+
+
+
+
+
 
   <script>
             
@@ -165,6 +203,14 @@ window.onload = loader1;
  
 
 </script>
+
+
+
+
+
+
+
+
 
 
 
@@ -267,4 +313,5 @@ setInterval(moveBody,10000)
     -->
   </body>
 </html>
+
 
